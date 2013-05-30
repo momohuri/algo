@@ -1,0 +1,20 @@
+@( algoForm : Form[Algo])
+@import helper._
+
+  testtt
+
+<fieldset style="width: 500px;">
+@helper.form(routes.Application.algoCalculate) {
+    @select(algoForm("names"), options(List("Quicksort","Mergesort")))
+    @inputText(algoForm("times"), '_label -> "How many Times?")
+    @inputText(algoForm("number"), '_label -> "How many number in the array?")
+
+
+    <fieldset style="margin-top: 10px;">
+        <input type="submit" value="Save" />
+    </fieldset>
+}
+</fieldset>
+
+
+
